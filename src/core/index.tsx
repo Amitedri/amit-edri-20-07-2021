@@ -75,7 +75,7 @@ export const mapAutoCompleteResults = (props: AutoCompleteProps) => {
 };
 
 export const fetchByCoordinates = async (lan: number, lat: number, disptach: any, setForcast: any,apiKey:string) => {
-  let url = `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${apiKey}&q=${lan}%2C${lat}&details=true`;
+  let url = `https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${apiKey}&q=${lan}%2C${lat}&details=true`;
   let request = await axios.get(url, {
     headers: {
       "Content-type": "application/json; charset=utf-8",
@@ -98,7 +98,7 @@ export const fetchByCoordinates = async (lan: number, lat: number, disptach: any
 //zsNtXiFS7rupHERGRF4M1qeu0Co8lBci&q
 export const fetchForecast = async (props: itemProps, disptach: any, fetchForecast: any,apiKey:string) => {
   const { country, id, name } = props;
-  let url = `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${id}?apikey=${apiKey}&details=true`;
+  let url = `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${id}?apikey=${apiKey}&details=true`;
   let request = axios.get(url, {
     headers: {
       "Content-type": "application/json; charset=utf-8",
@@ -138,7 +138,7 @@ export const handleAutoComplete = async (e: React.ChangeEvent<HTMLInputElement>,
     return;
   }
   setQuery(query);
-  let url = `http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${apiKey}&q=${query}`;
+  let url = `https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${apiKey}&q=${query}`;
   const request = await axios.get(url, {
     headers: {
       "Content-type": "application/json; charset=utf-8",
