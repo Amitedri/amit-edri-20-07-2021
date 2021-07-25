@@ -1,0 +1,193 @@
+.favsContainer {
+  background: url("../../Assets/background.png");
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.colorLayer {
+  background-color: #880ee9;
+  height: 100%;
+  width: 100%;
+  mix-blend-mode: soft-light;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.noFav {
+  font-size: 2em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: white;
+  -webkit-animation: appear 1s ease-in-out;
+          animation: appear 1s ease-in-out;
+}
+
+.favourites {
+  width: 85%;
+  height: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-top: 15%;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow-x: hidden;
+  z-index: 9999;
+}
+
+.favourite {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15%;
+          flex: 0 0 15%;
+  height: 35%;
+  width: 30% !important;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-left: 2%;
+  margin-top: 2%;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  color: white !important;
+}
+
+.location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.forcastLocal {
+  width: 85%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-top: 1px solid white;
+  border-radius: 5px;
+  color: white;
+}
+
+.deleteButton {
+  all: unset;
+  height: 18%;
+  width: 15%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: 5%;
+  margin-top: 2%;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: white;
+  color: black !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.deleteButton span {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+  .favourites {
+    height: 80%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    overflow-y: hidden;
+  }
+  .favourite {
+    height: 35%;
+    width: 30% !important;
+    border-radius: 15px;
+  }
+  .favourite span {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 250px) {
+  .favourites {
+    height: 85%;
+    overflow-y: scroll;
+    -webkit-animation: appear 1s ease-in-out;
+            animation: appear 1s ease-in-out;
+  }
+  .favourite {
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+    height: 25%;
+    width: 30% !important;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    border-radius: 15px;
+    -webkit-animation: appear 1s ease-in-out;
+            animation: appear 1s ease-in-out;
+  }
+  .favourite span {
+    font-size: 0.5em;
+  }
+}
+
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=favourites.css.map */
